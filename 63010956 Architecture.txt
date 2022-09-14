@@ -1,0 +1,152 @@
+1.1 Audacity
+
+	Audacity เป็น  Free open-source digital audio editor and recording application software ใช้ได้ทั้งในระบบปฏิบัติการ Windows, macOS, Linux เเละ Unix-like 
+ซึ่งเริ่มพัฒนาขี้นโดย Dominic Mazzoni and Roger Dannenberg ในปี ค.ศ. 1999 ที่ Carnegie Mellon University
+Audacity's features มีดังนี้
+	- Record, playing back sound
+Audacity สามารถบันทึกเสียงสดผ่านไมโครโฟนหรือมิกเซอร์ หรือบันทึกดิจิทัลจากสื่ออื่นๆ
+	- Export / Import
+นำเข้า แก้ไข และรวมไฟล์เสียง ส่งออกการบันทึกของคุณในรูปแบบไฟล์ต่างๆ มากมาย รวมถึงหลายไฟล์พร้อมกัน
+	- Sound Quality
+รองรับ 16 บิต 24 บิตและ 32 บิต อัตราและรูปแบบตัวอย่างจะถูกแปลงโดยใช้การสุ่มตัวอย่างซ้ำและการปรับสีคุณภาพสูง
+	- Plug-ins
+รองรับปลั๊กอินเอฟเฟกต์ LADSPA, LV2, Nyquist, VST และ Audio Unit คุณสามารถแก้ไขเอฟเฟกต์ได้อย่างง่ายดายในโปรแกรมแก้ไขข้อความ หรือเขียนปลั๊กอินของคุณเองก็ได้
+	- Editing
+แก้ไขได้ง่ายด้วย Cut, Copy, Paste และ Delete นอกจากนี้ยังไม่จำกัดลำดับการเลิกทำ (และทำซ้ำ) ในเซสชันเพื่อย้อนกลับหลายขั้นตอน
+	- Effects
+การแสดงตัวอย่างเอฟเฟกต์ LADSPA, LV2, VST และ Audio Unit (macOS) แบบเรียลไทม์ Plug-in Manager จัดการการติดตั้งปลั๊กอินและการเพิ่ม/ลบเอฟเฟกต์และตัวสร้างจากเมนู
+	- Accessibility
+track และ selections สามารถจัดการได้อย่างเต็มที่โดยใช้keyboard, keyboard shortcuts จำนวนมาก
+	- Analysis
+โหมดดูสเปกตรัมสำหรับการแสดงภาพและเลือกความถี่ หน้าต่างพล็อตสเปกตรัมสำหรับการวิเคราะห์ความถี่โดยละเอียด รองรับปลั๊กอินการวิเคราะห์ Vamp
+
+	Audacity ใช้ architecture pattern เเบบ Layers มีการใช้ libraries มากมาย เเต่ที่ใช้หลักๆ เเละสำคัญ ได้เเก่  PortAudio เเละ wxWidgets 
+ซึ่ง Higher-level abstractions เป็นผลมาจาก lower-level ของตัวมัน ทั้ง wxWidgets และ PortAudio เป็น abstractions layers ของระบบปฏิบัติการ 
+ซึ่งมีโค้ดแบบมีเงื่อนไขซึ่งเลือกการใช้งานที่แตกต่างกันขึ้นอยู่กับแพลตฟอร์มเป้าหมาย
+
+	Quality attribute : 1. Usability
+		Source of stimulus : User
+		Stimulus : User learn to use Audacity
+		Environment : Runtime
+		Artifact : UX, UI
+		Response : Help user to understand 
+		Response measure : User can use Audacity effectively without any guide
+			2. Portability
+		Source of stimulus : User's OS
+		Stimulus : User change OS
+		Environment : System services, system data 
+		Artifact : System
+		Response : Audacity can run on many OS ( Windows, macOS, Linux เเละ Unix-like )
+		Response measure : Number of OS that Audacity can run on
+			3. Security
+		Source of stimulus : Hacker
+		Stimulus : Virus
+		Environment : Plugin Online
+		Artifact : System
+		Response : Online safety when downloading
+		Response measure : Source of tampering identified
+
+
+Reference :
+	- https://en.wikipedia.org/wiki/Audacity_(audio_editor)
+	- https://blog.spacepatroldelta.com/a?ID=00300-c684628d-154a-4ba1-ac2a-20b46052fa07
+	- https://wiki.audacityteam.org/wiki/ArchitecturalDesign
+	- https://www.audacityteam.org/about/voluntary-product-accessibility-template/
+	- https://www.audacityteam.org/download/online-safety-when-downloading/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.2 Matplotlib
+
+	เป็น plotting library สำหรับภาษาการเขียนโปรแกรม Python และ extension ทางคณิตศาสตร์ NumPy มี API เชิงวัตถุสำหรับการฝังพล็อตลงในแอปพลิเคชันโดยใช้ชุดเครื่องมือ GUI ที่ใช้งานทั่วไป 
+เช่น Tkinter, wxPython, Qt หรือ GTK นอกจากนี้ยังมีอินเทอร์เฟซ "pylab" แบบขั้นตอนตามเครื่องสถานะ (เช่น OpenGL)  ใช้ได้ทั้งในระบบปฏิบัติการ Windows, macOS, Linux 
+	Matplotlib เขียนโดย John D. Hunter ต่อมา Michael Droettboom ได้รับการเสนอชื่อเป็นหัวหน้านักพัฒนาของ matplotlib ไม่นานก่อนที่ John Hunter จะเสียชีวิตในเดือนสิงหาคม 2012
+และ ต่อมาก็เข้าร่วมโดย Thomas Caswell ซึ่ง Matplotlib ได้รับการสนับสนุนทางการเงินจาก NumFOCUS
+
+Matplotlib's features มีดังนี้
+	- Create publication quality plots.
+	- Make interactive figures that can zoom, pan, update.
+	- Customize visual style and layout.
+	- Export to many file formats.
+	- Embed in JupyterLab and Graphical User Interfaces.
+	- Use a rich array of third-party packages built on Matplotlib.
+
+	Matplotlib ใช้ architecture pattern เเบบ Layers ได้เเก่
+	- Backend Layer
+	- Artist Layer
+	- Scripting Layer
+
+	Quality attribute : 1. Usability
+		Source of stimulus : User
+		Stimulus : User learn to use Matplotlib
+		Environment : Runtime
+		Artifact : UX, UI, GUI
+		Response : Graph
+		Response measure : User can use Matplotlib effectively without any guide
+			2. Performance
+		Source of stimulus : User
+		Stimulus : User use Matplotlib
+		Environment : Normal status
+		Artifact : System
+		Response : Generate graph
+		Response measure : Time to generate graph
+			3. Portability
+		Source of stimulus : User's OS
+		Stimulus : User change OS
+		Environment : System services, system data 
+		Artifact : System
+		Response : Matplotlib can run on many OS ( Windows, macOS, Linux )
+		Response measure : Number of OS that Matplotlib can run on
+
+Reference :
+	- https://en.wikipedia.org/wiki/Matplotlib
+	- https://towardsdatascience.com/understanding-the-structure-of-matplotlib-23b97f507fac
+	- https://www.educba.com/matplotlib-in-python/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.1 Joomla
+
+	Joomla เป็น free and open-source ระบบจัดการเนื้อหา content management system (CMS) สำหรับการเผยแพร่เนื้อหาเว็บ ปรับเเต่ง modules ต่างๆ 
+ทำให้ง่าย เเละประหยัดเวลา ตลอดหลายปีที่ผ่านมา Joomla! ได้รับรางวัลหลายรางวัล มันถูกสร้างขึ้นบน model–view–controller web application framework 
+ที่สามารถใช้งานได้โดยไม่ขึ้นกับ CMS ที่ให้คุณสร้างแอปพลิเคชันออนไลน์ที่มีประสิทธิภาพ
+
+Joomla's core features มีดังนี้
+	- Joomla! Essentials
+	- Awesome design features
+	- Content editing & publishing made easy
+	- Great Core functionalities
+	- CMS Management made easy
+	- Global and professional support
+	- Take Joomla! to the next level as developer
+
+	Joomla จะมี architecture pattern เเบบ Model-View-Controller (MVC) มี MySQL , PostgreSQL
+
+	Quality attribute : 1. Usability
+		Source of stimulus : User
+		Stimulus : User use Joomla
+		Environment : Runtime
+		Artifact : UX, UI
+		Response : User's website content satisfied User's needs
+		Response measure : User can use Joomla effectively without any guide
+			2. Performance
+		Source of stimulus : User
+		Stimulus : Use Joomla to manage content
+		Environment : Compile time, run time, build time
+		Artifact : Website content
+		Response : Joomla manage content
+		Response measure : Time used for mange website content
+			3. Modifiability
+		Source of stimulus : End user, developer
+		Stimulus : Use extensions
+		Environment : Runtime, compile time
+		Artifact : System interface
+		Response : Joomla Extensions Directory
+		Response measure : Modification Affects other quality attributes ?
+
+Reference :
+	- https://www.joomla.org/about-joomla.html
+	- https://www.mindphp.com/%E0%B8%9A%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1/34-joomla/4178-pros-and-cons-joomla-cms-website-management.html
+	- https://www.joomla.org/core-features.html
+
+
